@@ -1,31 +1,32 @@
 import React from 'react';
-import { FaAngleDoubleRight } from 'react-icons/fa';
-import {resume} from '../resources/data';
+import { FaSketch } from 'react-icons/fa';
+import {experience} from '../resources/data';
 
 const Work = () => {
-  const {experience} = resume;
   return ( 
-    <section className="section">
-      <div className="title">
+    <section className="work-section-center">
+      <div className="work-title">
         <h2>Work Experience</h2>
       </div>
-      <div className="jobs-center">
+      <div className="work-jobs-center">
         {experience.map((job, index) => {
           const {company, date, title, duties} = job;
           return (
-            <article key = {index} className = 'job-info'>
-            <h3>{title}</h3>
-            <h4>{company}</h4>
-            <p>{date}</p>
+            <section key = {index} className = 'job-info'>
+              <h3>{title}</h3>
+              <h4>{company}</h4>
+              <p>{date}</p>
               {duties.map((duty, index) => {
                 return (
                   <div key = {index} className = 'job-desc'>
-                    <FaAngleDoubleRight className = 'job-icon'></FaAngleDoubleRight>
-                    <p>{duty}</p>
+                    <p>
+                      <FaSketch className = 'job-icon'></FaSketch>
+                      {duty}
+                    </p>
                   </div>
                 );
               })}
-            </article>
+            </section>
           );
         })}
       </div>

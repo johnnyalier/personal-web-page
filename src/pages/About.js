@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import {contact} from '../resources/data';
+import {contact, hobbies, favourites, social} from '../resources/data';
 
 const About = () => {
     const [info, setInfo] = useState(contact);
     return (
-        <>
-            <div>
-                <h1>About Page</h1>
+        <section className = 'about-section-center'>
+            <div className = 'contact'>
                 {info.map((myContact) => {
                     return (
                         <div className = 'item'>
@@ -21,34 +20,43 @@ const About = () => {
             </div>
             <br />
             <div className = 'hobbies'>
-                <h4>Hobbies</h4>
-                <p>Favourite sport teams</p>
-                <p>Socializing</p>
-                <p>Travelling</p>
-            </div>
-            <br />
-            <div className = 'hobbies'>
-                <h4>Hobbies</h4>
-                <p>Favourite sport teams</p>
-                <p>Socializing</p>
-                <p>Travelling</p>
+                <div className="item">
+                    <h4>Hobbies</h4>
+                    {hobbies.map((hobby, index) => {
+                        return (
+                            <p key = {index}>{hobby}</p>
+                        );
+                    })}
+                </div>
             </div>
             <br />
             <div className = 'socialMedia'>
-                <h4>Social media links</h4>
-                <p>Facebook</p>
-                <p>Instagram</p>
-                <p>Twitter</p>
+                <div className="item">
+                    <h4>Social media links</h4>
+                    <ul>
+                        {social.map((socialIcon) => {
+                            const {id, url, name} = socialIcon;
+                            return (
+                                <p key = {id} className = 'media-item'>
+                                    <a href={url} target="_blank" rel="noopener noreferrer">{name}</a>
+                                </p>
+                            );
+                        })}
+                    </ul>
+                </div>
             </div>
             <br />
             <div className = 'favourites'>
-                <h4>Favourite stuff</h4>
-                <p>Books</p>
-                <p>Movies</p>
-                <p>Sports</p>
-                <p>Games</p>
+                <div className="item">
+                    <h4>Favourite stuff</h4>
+                    {favourites.map((favourite, index) => {
+                        return (
+                            <p key = {index}>{favourite}</p>
+                        );
+                    })}
+                </div>
             </div>
-        </>
+        </section>
     );
 };
 
