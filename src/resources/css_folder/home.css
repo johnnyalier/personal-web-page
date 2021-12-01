@@ -21,11 +21,12 @@
   margin: 1rem auto;
   margin-top: 1rem;
   width: 80vw;
-  height: 450px;
+  height: 500px;
   max-width: 1200px;
   text-align: justify;
   position: relative;
   display: flex;
+  box-shadow: var(--light-shadow);
 }
 
 .text {
@@ -94,6 +95,7 @@ article {
 article.home-activeSlide {
   opacity: 1;
   transform: translateX(0);
+  margin: 00.5rem;
 }
 article.home-lastSlide {
   transform: translateX(-100%);

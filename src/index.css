@@ -162,7 +162,7 @@ nav {
   transform: rotate(90deg);
 }
 .logo {
-  height: 60px;
+  height: 70px;
 }
 .links a {
   color: var(--clr-grey-3);
@@ -189,14 +189,99 @@ nav {
 .show-container {
   height: 10rem;
 }
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  place-content: 1.5rem;
+}
+.footer {
+  background: var(--clr-grey);
+  box-shadow: var(--light-shadow);
+  align-content: center;
+}
+.footer-item {
+  margin: 1rem;
+}
+.pages {
+  background: var(--clr-primary-10);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: var(--light-shadow);
+}
+.home-title {
+  margin: 1rem auto;
+  margin-left: 2rem;
+  text-align: justify;
+}
+.about-section-center {
+  margin: 2rem;
+  padding: auto;
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+}
+.contact {
+  box-shadow: var(--light-shadow);
+}
+.item {
+  margin: 00.5rem;
+  align-content: center;
+}
+.hobbies {
+  box-shadow: var(--light-shadow);
+}
+.socialMedia {
+  box-shadow: var(--light-shadow);
+}
+.media-item {
+  justify-content: center;
+}
+.favourites {
+  box-shadow: var(--light-shadow);
+}
+.education-section-center {
+  margin: 2rem;
+}
+.history {
+  box-shadow: var(--light-shadow);
+}
+.skill {
+  box-shadow: var(--light-shadow);
+}
+.skill-header {
+  background: var(--clr-grey-7);
+  box-shadow: var(--light-shadow);
+}
+.work-title {
+  margin: 2rem;
+}
+.work-jobs-center {
+  padding: 00.25rem;
+  margin: 2rem;
+}
+.job-info {
+  padding: 00.5rem;
+  margin-top: 1rem;
+  box-shadow: var(--light-shadow);
+}
+.copyright {
+  justify-content: center;
+  margin: 2rem;
+}
+.footer-center {
+  justify-content: center;
+  align-content: center;
+}
+
 @media screen and (min-width: 800px) {
   .nav-center {
     max-width: 1170px;
-    margin: 0 auto;
+    margin: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    /* padding: 1rem; */
+    margin-top: 0;
   }
   .nav-header {
     padding: 0;
@@ -242,7 +327,6 @@ nav {
   }
   .footer-icons {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     place-content: 1.5rem;
   }
